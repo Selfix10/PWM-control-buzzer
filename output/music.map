@@ -1,0 +1,286 @@
+Archive member included because of file (symbol)
+
+c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_udivsi3.o)
+                              .obj/source/main.o (__aeabi_uidiv)
+c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_dvmd_tls.o)
+                              c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x34000000         0x02000000         xr
+ram              0x36000000         0x0a000000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD .obj/source/start.o
+LOAD .obj/source/main.o
+LOAD .obj/source/s5pv210-irom.o
+LOAD c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a
+                0x00000400                STACK_FIQ_SIZE = 0x400
+                0x00000400                STACK_IRQ_SIZE = 0x400
+                0x00000400                STACK_ABT_SIZE = 0x400
+                0x00000400                STACK_UND_SIZE = 0x400
+                0x00008000                STACK_SRV_SIZE = 0x8000
+
+.text           0x34000000     0x1138
+                0x34000000                . = ALIGN (0x8)
+                0x34000000                PROVIDE (__text_start, .)
+ .obj/source/start.o(.text)
+ .text          0x34000000      0x8c0 .obj/source/start.o
+                0x34000010                _start
+                0x34000754                irq
+ .obj/source/s5pv210-irom.o(.text)
+ .text          0x340008c0       0xd4 .obj/source/s5pv210-irom.o
+                0x340008c0                irom_copyself
+ *(.text)
+ .text          0x34000994      0x404 .obj/source/main.o
+                0x340009e4                on
+                0x340009fc                off
+                0x34000a14                delay
+                0x34000a5c                set_fre_initial
+                0x34000ac0                do_key_initial
+                0x34000b3c                get_key_status
+                0x34000b8c                get_key_event
+                0x34000be4                change_music
+                0x34000c28                return_to_zero
+                0x34000cd0                do_led_initial
+                0x34000d5c                close_led_all
+ .text          0x34000d98      0x114 c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_udivsi3.o)
+                0x34000d98                __aeabi_uidiv
+                0x34000d98                __udivsi3
+                0x34000e8c                __aeabi_uidivmod
+ .text          0x34000eac        0x4 c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_dvmd_tls.o)
+                0x34000eac                __aeabi_idiv0
+                0x34000eac                __aeabi_ldiv0
+ *(.text.*)
+ .text.startup  0x34000eb0      0x288 .obj/source/main.o
+                0x34000eb0                main
+                0x34001138                . = ALIGN (0x8)
+ *(.rodata)
+ *(.rodata.*)
+                0x34001138                . = ALIGN (0x8)
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+                0x34001138                . = ALIGN (0x8)
+                0x34001138                PROVIDE (__text_end, .)
+
+.vfp11_veneer   0x34001138        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x34001138        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x34001138        0x0
+ .iplt          0x00000000        0x0 .obj/source/start.o
+
+.rel.dyn        0x34001138        0x0
+ .rel.iplt      0x00000000        0x0 .obj/source/start.o
+
+.data_shadow    0x34001138        0x0
+                0x34001138                PROVIDE (__data_shadow_start, .)
+                0x34001748                PROVIDE (__data_shadow_end, (. + SIZEOF (.data)))
+
+.data           0x36000000      0x610 load address 0x34001138
+                0x36000000                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x36000000        0x0 .obj/source/start.o
+ .data          0x36000000      0x60c .obj/source/main.o
+                0x36000000                loud
+                0x36000004                Happy_birthday
+                0x360000e4                Graze_The_Roof
+                0x360001dc                The_March_of_the_Volunteers
+                0x3600052c                Twinkle
+ .data          0x3600060c        0x0 .obj/source/s5pv210-irom.o
+ .data          0x3600060c        0x0 c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_udivsi3.o)
+ .data          0x3600060c        0x0 c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_dvmd_tls.o)
+                0x36000610                . = ALIGN (0x8)
+ *fill*         0x3600060c        0x4 
+                0x36000610                PROVIDE (__data_end, .)
+
+.igot.plt       0x36000610        0x0 load address 0x34001748
+ .igot.plt      0x00000000        0x0 .obj/source/start.o
+
+.bss            0x36000610     0x9010 load address 0x34001748
+                0x36000610                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x36000610        0x0 .obj/source/start.o
+ .bss           0x36000610        0xc .obj/source/main.o
+ .bss           0x3600061c        0x0 .obj/source/s5pv210-irom.o
+ .bss           0x3600061c        0x0 c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_udivsi3.o)
+ .bss           0x3600061c        0x0 c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_dvmd_tls.o)
+ *(.bss.*)
+ *(.sbss)
+ *(COMMON)
+                0x3600061c                PROVIDE (__bss_end, .)
+                0x36000620                . = ALIGN (0x8)
+ *fill*         0x3600061c        0x4 
+                0x36000620                PROVIDE (__heap_start, .)
+ *(.heap)
+                0x36000620                . = ALIGN (0x8)
+                0x36000620                PROVIDE (__heap_end, .)
+                0x36000620                . = ALIGN (0x8)
+                0x36000620                PROVIDE (__stack_start, .)
+                0x36000620                PROVIDE (__stack_fiq_start, .)
+                0x36000a20                . = (. + STACK_FIQ_SIZE)
+ *fill*         0x36000620      0x400 
+                0x36000a20                PROVIDE (__stack_fiq_end, .)
+                0x36000a20                . = ALIGN (0x8)
+                0x36000a20                PROVIDE (__stack_irq_start, .)
+                0x36000e20                . = (. + STACK_IRQ_SIZE)
+ *fill*         0x36000a20      0x400 
+                0x36000e20                PROVIDE (__stack_irq_end, .)
+                0x36000e20                . = ALIGN (0x8)
+                0x36000e20                PROVIDE (__stack_abt_start, .)
+                0x36001220                . = (. + STACK_ABT_SIZE)
+ *fill*         0x36000e20      0x400 
+                0x36001220                PROVIDE (__stack_abt_end, .)
+                0x36001220                . = ALIGN (0x8)
+                0x36001220                PROVIDE (__stack_und_start, .)
+                0x36001620                . = (. + STACK_UND_SIZE)
+ *fill*         0x36001220      0x400 
+                0x36001620                PROVIDE (__stack_und_end, .)
+                0x36001620                . = ALIGN (0x8)
+                0x36001620                PROVIDE (__stack_srv_start, .)
+                0x36009620                . = (. + STACK_SRV_SIZE)
+ *fill*         0x36001620     0x8000 
+                0x36009620                PROVIDE (__stack_srv_end, .)
+                0x36009620                . = ALIGN (0x8)
+                0x36009620                PROVIDE (__stack_end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x30
+ *(.comment)
+ .comment       0x00000000       0x30 .obj/source/main.o
+                                 0x31 (size before relaxing)
+ .comment       0x00000000       0x31 .obj/source/s5pv210-irom.o
+
+.ARM.attributes
+                0x00000000       0x2d
+ .ARM.attributes
+                0x00000000       0x1f .obj/source/start.o
+ .ARM.attributes
+                0x0000001f       0x37 .obj/source/main.o
+ .ARM.attributes
+                0x00000056       0x37 .obj/source/s5pv210-irom.o
+ .ARM.attributes
+                0x0000008d       0x18 c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000000a5       0x18 c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_dvmd_tls.o)
+
+.debug_abbrev   0x00000000      0x3f5
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x14 .obj/source/start.o
+ .debug_abbrev  0x00000014      0x2e3 .obj/source/main.o
+ .debug_abbrev  0x000002f7       0xfe .obj/source/s5pv210-irom.o
+
+.debug_info     0x00000000     0x1305
+ *(.debug_info)
+ .debug_info    0x00000000       0x49 .obj/source/start.o
+ .debug_info    0x00000049     0x1168 .obj/source/main.o
+ .debug_info    0x000011b1      0x154 .obj/source/s5pv210-irom.o
+
+.debug_line     0x00000000      0x733
+ *(.debug_line)
+ .debug_line    0x00000000      0x27a .obj/source/start.o
+ .debug_line    0x0000027a      0x42e .obj/source/main.o
+ .debug_line    0x000006a8       0x8b .obj/source/s5pv210-irom.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_aranges  0x00000000       0x68
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 .obj/source/start.o
+ .debug_aranges
+                0x00000020       0x28 .obj/source/main.o
+ .debug_aranges
+                0x00000048       0x20 .obj/source/s5pv210-irom.o
+OUTPUT(output/music.elf elf32-littlearm)
+
+.debug_loc      0x00000000      0xab8
+ .debug_loc     0x00000000      0xa50 .obj/source/main.o
+ .debug_loc     0x00000a50       0x68 .obj/source/s5pv210-irom.o
+
+.debug_ranges   0x00000000      0x230
+ .debug_ranges  0x00000000      0x230 .obj/source/main.o
+
+.debug_str      0x00000000      0x260
+ .debug_str     0x00000000      0x1f8 .obj/source/main.o
+                                0x234 (size before relaxing)
+ .debug_str     0x000001f8       0x68 .obj/source/s5pv210-irom.o
+                                 0xf1 (size before relaxing)
+
+.debug_frame    0x00000000      0x168
+ .debug_frame   0x00000000      0x120 .obj/source/main.o
+ .debug_frame   0x00000120       0x28 .obj/source/s5pv210-irom.o
+ .debug_frame   0x00000148       0x20 c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_udivsi3.o)
+
+Cross Reference Table
+
+Symbol                                            File
+Graze_The_Roof                                    .obj/source/main.o
+Happy_birthday                                    .obj/source/main.o
+The_March_of_the_Volunteers                       .obj/source/main.o
+Twinkle                                           .obj/source/main.o
+__aeabi_idiv0                                     c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_dvmd_tls.o)
+                                                  c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_udivsi3.o)
+__aeabi_ldiv0                                     c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_dvmd_tls.o)
+__aeabi_uidiv                                     c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_udivsi3.o)
+                                                  .obj/source/main.o
+__aeabi_uidivmod                                  c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_udivsi3.o)
+__bss_end                                         .obj/source/start.o
+__bss_start                                       .obj/source/start.o
+__data_end                                        .obj/source/start.o
+__data_shadow_end                                 .obj/source/s5pv210-irom.o
+                                                  .obj/source/start.o
+__data_shadow_start                               .obj/source/start.o
+__data_start                                      .obj/source/start.o
+__stack_abt_end                                   .obj/source/start.o
+__stack_fiq_end                                   .obj/source/start.o
+__stack_irq_end                                   .obj/source/start.o
+__stack_srv_end                                   .obj/source/start.o
+__stack_und_end                                   .obj/source/start.o
+__text_end                                        .obj/source/start.o
+__text_start                                      .obj/source/s5pv210-irom.o
+                                                  .obj/source/start.o
+__udivsi3                                         c:/users/86183/desktop/嵌入式/课程相关软件和文档/裸机开发eclipse环境/eclipse-kepler-for-arm-windows-x86_64/compiler/arm-2013.05/bin/../lib/gcc/arm-none-eabi/4.7.3\libgcc.a(_udivsi3.o)
+_start                                            .obj/source/start.o
+change_music                                      .obj/source/main.o
+close_led_all                                     .obj/source/main.o
+delay                                             .obj/source/main.o
+do_key_initial                                    .obj/source/main.o
+do_led_initial                                    .obj/source/main.o
+get_key_event                                     .obj/source/main.o
+get_key_status                                    .obj/source/main.o
+irom_copyself                                     .obj/source/s5pv210-irom.o
+                                                  .obj/source/start.o
+irq                                               .obj/source/start.o
+loud                                              .obj/source/main.o
+main                                              .obj/source/main.o
+                                                  .obj/source/start.o
+off                                               .obj/source/main.o
+on                                                .obj/source/main.o
+return_to_zero                                    .obj/source/main.o
+set_fre_initial                                   .obj/source/main.o
